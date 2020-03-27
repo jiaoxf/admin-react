@@ -25,8 +25,8 @@ class SiderDemo extends React.Component {
     return (
       <Layout style={{ minHeight: '100vh' }}>
         <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
-          <div className="logo" style={{lineHeight:'64px'}}>
-            哈哈哈
+          <div className="logo" style={{lineHeight:'60px'}}>
+            Admin管理
           </div>
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
