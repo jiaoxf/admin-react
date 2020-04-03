@@ -67,6 +67,7 @@ class Text extends React.Component{
       user: '焦学峰',
       name: '你好呀'
     })
+    
   }
   render(){
     console.log('render函数执行了')
@@ -83,6 +84,7 @@ class Text extends React.Component{
     this.setState({
       name: '改变了'
     })
+    
   }
   componentWillReceiveProps(nextprops){
     console.log('componentWillReceiveProps函数执行了,新的props是'+nextprops)

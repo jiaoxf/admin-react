@@ -2,7 +2,7 @@ import React from 'react'
 class Home extends React.Component{
   construcor(props){
     super(props)
-
+    
   }
   render(){
     return(

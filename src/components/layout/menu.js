@@ -20,7 +20,19 @@ class SiderDemo extends React.Component {
     console.log(collapsed);
     this.setState({ collapsed });
   };
+  
+  componentDidMount() {
+    function timeout(ms) {
+      return new Promise((resolve, reject) => {
+        setTimeout(resolve, ms, 'done');
+      });
+    }
 
+    timeout(1000).then((value) => {
+      console.log(value);
+    });
+  }
+  
   render() {
     return (
       <Layout style={{ minHeight: '100vh' }}>
