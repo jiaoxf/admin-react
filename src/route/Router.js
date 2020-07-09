@@ -12,16 +12,16 @@ import {
 function RouterPage(){
   return(
     <BrowserRouter>
-      <Switch>
-        <Route path="/home" component={Home} />
-        <Route path="/admin" component={Admin} />
-        <Route path="/login" component={Login} />
-        <Route path="/user" render={(routeProps) => {
-          return <User {...routeProps} />
-        }} />
-        <Redirect to="./home" from="/" />
-      </Switch>
-    </BrowserRouter>
+        <Switch>
+                <Route path="/home" component={Home} />
+                <Route path="/admin" component={Admin} />
+                <Route path="/login" component={Login} />
+                <Route path="/user" render={(routeProps) => {
+                    return <User {...routeProps} />
+                }} />
+                <Redirect to="./login" from="/" />
+        </Switch>
+        </BrowserRouter>
   )
 }
 export default RouterPage
