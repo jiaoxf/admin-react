@@ -3,10 +3,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter , Route, Link, Switch, Redirect } from 'react-router-dom';
 // import store from './store';
 import {
-  Home,
-  Login,
-  Admin,
-  User
+    Home,
+    Login,
+    Admin,
+    User
 } from './../pages'
 
 function RouterPage(){
@@ -19,7 +19,7 @@ function RouterPage(){
                 <Route path="/user" render={(routeProps) => {
                     return <User {...routeProps} />
                 }} />
-                <Redirect to="./login" from="/" />
+                <Redirect to="./admin" from="/" />
         </Switch>
         </BrowserRouter>
   )

@@ -20,7 +20,7 @@ class Login extends React.Component{
     
     componentDidMount() {
         const _this = this;    //先存一下this，以防使用箭头函数this会指向我们不希望它所指向的对象。
-        axios.get('http://localhost:3000/api/blog/list')
+        axios.get('/api/blog/list')
         .then(res => {
             console.log(res)
         })
@@ -31,6 +31,16 @@ class Login extends React.Component{
     
     onFinish(values) {
         console.log('Success:', values);
+        const _this = this;
+        axios.post('/api/user/login', {
+          values
+        })
+          .then(res => {
+            console.log(res)
+          })
+          .catch(err => {
+            console.log(err);
+          })
     };
 
     onFinishFailed(errorInfo) {
@@ -66,7 +76,7 @@ class Login extends React.Component{
                 <Form.Item {...tailLayout}>
                     <Button type="primary" htmlType="submit">
                         提交
-                </Button>
+                    </Button>
                 </Form.Item>
             </Form>
         );
